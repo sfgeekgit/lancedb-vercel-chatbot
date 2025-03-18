@@ -2,6 +2,7 @@ import { createEmbeddingsTable } from './insert'
 import { NextResponse } from 'next/server'
 
 export async function POST(req: Request) {
+  console.log('hi there')
   const { url, pages } = await req.json()
   try {
     const name = await createEmbeddingsTable(url, pages)
